@@ -1,0 +1,153 @@
+body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: #c65011;
+                margin: 0;
+}
+
+.ghost {
+                width: 100px;
+                height: 150px;
+                background-color: #fff;
+                border-radius: 50% 50% 0 0;
+                position: relative;
+                box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+                animation: salinma 1s infinite;
+}
+
+.ghost::before,
+.ghost::after {
+                content: '';
+                position: absolute;
+                background-color: #fff;
+}
+
+.ghost::before {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: #000;
+                top: 30px;
+                left: 20px;
+}
+
+.ghost::after {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                background-color: #000;
+                top: 30px;
+                right: 20px;
+}
+
+@keyframes salinma {
+                0% {
+                                transform: translateY(0);
+                }
+
+                50% {
+                                transform: translateY(-10px);
+                }
+
+                100% {
+                                transform: translateY(0);
+                }
+}
+
+body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: #00034b;
+                margin: 0;
+}
+
+.ghost {
+                animation: float 2s infinite;
+                position: relative;
+                width: 150px;
+                height: 225px;
+                background: #ffffff;
+                box-shadow: -17px 0px 0px #dbdbdb inset, 0 0 50px #5939db;
+                border-radius: 100px 100px 0 0;
+}
+
+&__eyes {
+                display: flex;
+                justify-content: space-around;
+                margin: 0 auto;
+                padding: 70px 0 0;
+                width: 90px;
+                height: 20px;
+
+                &:before,
+                &:after {
+                                content: "";
+                                display: block;
+                                width: 15px;
+                                height: 25px;
+                                background: #00034b;
+                                border-radius: 50%;
+                }
+}
+
+&__dimples {
+                display: flex;
+                justify-content: space-around;
+                margin: 0 auto;
+                padding: 35px 0 0;
+                width: 130px;
+                height: 20px;
+
+                &:before,
+                &:after {
+                                content: "";
+                                display: block;
+                                width: 15px;
+                                height: 15px;
+                                background: #ffbeff;
+                                border-radius: 50%;
+                }
+}
+
+&__feet {
+                width: 100%;
+                position: absolute;
+                bottom: -13px;
+                display: flex;
+                justify-content: space-between;
+
+                &-foot {
+                                width: 25%;
+                                height: 26px;
+                                border-radius: 50%;
+                                background: #ffffff;
+
+                                &:last-child {
+                                                background-image: linear-gradient(to right, #fff 55%, #fff 45%);
+                                }
+                }
+}
+
+.shadow {
+                background: #000232;
+                width: 150px;
+                height: 40px;
+                margin-top: 50px;
+                border-radius: 50%;
+}
+
+@keyframes float {
+
+                0%,
+                100% {
+                                transform: translateY(0);
+                }
+
+                50% {
+                                transform: translateY(-15px);
+                }
+}

@@ -1,0 +1,99 @@
+
+body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                background-color: #00034b;
+                /* #00034b; */
+                margin: 0;
+                position: relative;
+}
+
+.container {
+                position: relative;
+}
+
+.ghost {
+                animation: float 2s infinite;
+                position: relative;
+                width: 150px;
+                height: 225px;
+                background: #ffffff;
+                box-shadow: -17px 0px 0px #dbdbdb inset, 0 0 50px #5939db;
+                border-radius: 100px 100px 0 0;
+                z-index: 2;
+                /* Hayaletin üstte görünmesi için */
+}
+
+.ghost__eyes {
+                display: flex;
+                justify-content: space-around;
+                margin: 0 auto;
+                padding: 40px 0 0;
+                /* Gözlerin yukarıdan mesafesi */
+                width: 90px;
+}
+
+.ghost__eyes-eye {
+                width: 15px;
+                height: 25px;
+                background: #00034b;
+                border-radius: 50%;
+}
+
+.ghost__dimples {
+                display: flex;
+                justify-content: space-around;
+                margin: 0 auto;
+                padding: 10px 0;
+                /* Dimples'in yukarıdan mesafesi */
+                width: 90px;
+}
+
+.ghost__dimples-dimple {
+                width: 15px;
+                height: 15px;
+                background: #ffbeff;
+                border-radius: 50%;
+}
+
+.ghost__feet {
+                width: 100%;
+                position: absolute;
+                bottom: -13px;
+                display: flex;
+                justify-content: space-between;
+}
+
+.ghost__feet-foot {
+                width: 25%;
+                height: 26px;
+                border-radius: 50%;
+                background: #ffffff;
+}
+
+.shadow {
+                background: #000232;
+                width: 150px;
+                height: 40px;
+                margin-top: 0;
+                /* Gölgeyi hayaletin hemen altına koymak için */
+                border-radius: 50%;
+                position: absolute;
+                bottom: -20px;
+                /* Gölgeyi biraz daha aşağıda tut */
+}
+
+
+@keyframes float {
+
+                0%,
+                100% {
+                                transform: translateY(0);
+                }
+
+                50% {
+                                transform: translateY(-15px);
+                }
+}
