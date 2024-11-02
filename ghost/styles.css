@@ -77,12 +77,11 @@ body {
                 background: #000232;
                 width: 150px;
                 height: 40px;
-                margin-top: 0;
-                /* Gölgeyi hayaletin hemen altına koymak için */
+                margin-top: 0; 
                 border-radius: 50%;
                 position: absolute;
                 bottom: -20px;
-                /* Gölgeyi biraz daha aşağıda tut */
+                
 }
 
 
